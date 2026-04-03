@@ -20,7 +20,6 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -30,7 +29,6 @@
       overflow-x: hidden;
     }
 
-    /* GRID BACKGROUND */
     body::before {
       content: '';
       position: fixed;
@@ -43,7 +41,6 @@
       z-index: 0;
     }
 
-    /* NOISE OVERLAY */
     body::after {
       content: '';
       position: fixed;
@@ -57,9 +54,7 @@
     /* NAV */
     nav {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       z-index: 100;
       display: flex;
       justify-content: space-between;
@@ -105,9 +100,7 @@
       z-index: 1;
     }
 
-    .hero-content {
-      max-width: 800px;
-    }
+    .hero-content { max-width: 800px; }
 
     .hero-tag {
       display: inline-flex;
@@ -157,10 +150,7 @@
       animation: fadeUp 0.6s 0.6s forwards;
     }
 
-    .hero-subtitle span {
-      color: var(--accent3);
-      font-weight: 600;
-    }
+    .hero-subtitle span { color: var(--accent3); font-weight: 600; }
 
     .hero-cta {
       display: flex;
@@ -186,10 +176,7 @@
       clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
     }
 
-    .btn-primary:hover {
-      background: #fff;
-      transform: translateY(-2px);
-    }
+    .btn-primary:hover { background: #fff; transform: translateY(-2px); }
 
     .btn-secondary {
       display: inline-flex;
@@ -205,11 +192,7 @@
       transition: all 0.2s;
     }
 
-    .btn-secondary:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-2px);
-    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
     /* HERO STATS */
     .hero-stats {
@@ -223,9 +206,7 @@
       animation: fadeLeft 0.6s 1s forwards;
     }
 
-    .stat {
-      text-align: right;
-    }
+    .stat { text-align: right; }
 
     .stat-number {
       font-family: 'Space Mono', monospace;
@@ -270,17 +251,14 @@
     .scroll-line::after {
       content: '';
       position: absolute;
-      top: 0;
-      left: -100%;
+      top: 0; left: -100%;
       width: 100%;
       height: 100%;
       background: var(--accent);
       animation: scrollLine 2s infinite;
     }
 
-    @keyframes scrollLine {
-      to { left: 100%; }
-    }
+    @keyframes scrollLine { to { left: 100%; } }
 
     /* SECTIONS */
     section {
@@ -309,11 +287,7 @@
       letter-spacing: -2px;
     }
 
-    .section-line {
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
+    .section-line { flex: 1; height: 1px; background: var(--border); }
 
     /* SKILLS */
     .skills-section {
@@ -340,9 +314,7 @@
     .skill-category::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       height: 2px;
       background: linear-gradient(90deg, var(--accent), var(--accent2));
       transform: scaleX(0);
@@ -362,11 +334,7 @@
       margin-bottom: 16px;
     }
 
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 
     .skill-tag {
       padding: 4px 10px;
@@ -422,11 +390,7 @@
       margin-bottom: 20px;
     }
 
-    .project-emoji {
-      font-size: 40px;
-      margin-bottom: 20px;
-      display: block;
-    }
+    .project-emoji { font-size: 40px; margin-bottom: 20px; display: block; }
 
     .project-title {
       font-size: 24px;
@@ -442,12 +406,7 @@
       margin-bottom: 24px;
     }
 
-    .project-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 28px;
-    }
+    .project-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
 
     .stack-tag {
       padding: 4px 12px;
@@ -458,15 +417,9 @@
       transition: all 0.2s;
     }
 
-    .project-card:hover .stack-tag {
-      border-color: rgba(0,229,255,0.3);
-      color: var(--accent);
-    }
+    .project-card:hover .stack-tag { border-color: rgba(0,229,255,0.3); color: var(--accent); }
 
-    .project-links {
-      display: flex;
-      gap: 16px;
-    }
+    .project-links { display: flex; gap: 16px; }
 
     .project-link {
       display: inline-flex;
@@ -495,11 +448,13 @@
       letter-spacing: 1px;
     }
 
-    .project-visual {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    .project-badge.wip {
+      background: rgba(251,191,36,0.08);
+      border-color: rgba(251,191,36,0.25);
+      color: #fbbf24;
     }
+
+    .project-visual { display: flex; flex-direction: column; gap: 12px; }
 
     .project-metric {
       display: flex;
@@ -523,9 +478,72 @@
       font-weight: 700;
     }
 
+    /* EXPERIENCE */
+    .experience-section {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .experience-list { display: flex; flex-direction: column; gap: 0; }
+
+    .exp-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 40px;
+      padding: 36px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .exp-item:last-child { border-bottom: none; }
+
+    .exp-date {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 1px;
+      padding-top: 4px;
+    }
+
+    .exp-company {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    .exp-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .exp-body {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .exp-body ul { padding-left: 1.2rem; margin-top: 8px; }
+    .exp-body li { margin-bottom: 6px; }
+
+    .exp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+
+    .exp-tag {
+      padding: 3px 10px;
+      background: rgba(0,229,255,0.05);
+      border: 1px solid rgba(0,229,255,0.12);
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
     /* ABOUT */
     .about-section {
-      background: var(--bg2);
       border-top: 1px solid var(--border);
     }
 
@@ -533,7 +551,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
-      align-items: center;
+      align-items: start;
     }
 
     .about-text p {
@@ -543,15 +561,9 @@
       margin-bottom: 20px;
     }
 
-    .about-text p strong {
-      color: var(--text);
-    }
+    .about-text p strong { color: var(--text); }
 
-    .about-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
+    .about-timeline { display: flex; flex-direction: column; gap: 0; }
 
     .timeline-item {
       display: flex;
@@ -572,13 +584,7 @@
       box-shadow: 0 0 12px var(--accent);
     }
 
-    .timeline-content {}
-
-    .timeline-title {
-      font-weight: 700;
-      font-size: 16px;
-      margin-bottom: 4px;
-    }
+    .timeline-title { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
 
     .timeline-sub {
       font-family: 'Space Mono', monospace;
@@ -587,20 +593,11 @@
       margin-bottom: 8px;
     }
 
-    .timeline-desc {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
+    .timeline-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
     /* CONTACT */
-    .contact-section {
-      text-align: center;
-    }
-
-    .contact-section .section-header {
-      justify-content: center;
-    }
+    .contact-section { text-align: center; }
+    .contact-section .section-header { justify-content: center; }
 
     .contact-subtitle {
       color: var(--muted);
@@ -610,12 +607,7 @@
       line-height: 1.6;
     }
 
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+    .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 
     /* FOOTER */
     footer {
@@ -634,19 +626,17 @@
       color: var(--muted);
     }
 
-    .footer-accent {
-      color: var(--accent);
-    }
+    .footer-accent { color: var(--accent); }
 
     /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeLeft {
       from { opacity: 0; transform: translateX(20px); }
-      to { opacity: 1; transform: translateX(0); }
+      to   { opacity: 1; transform: translateX(0); }
     }
 
     .reveal {
@@ -655,10 +645,7 @@
       transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* GLOW ORBS */
     .orb {
@@ -669,36 +656,10 @@
       z-index: 0;
     }
 
-    .orb-1 {
-      width: 500px;
-      height: 500px;
-      background: rgba(0,229,255,0.04);
-      top: -100px;
-      right: -100px;
-    }
+    .orb-1 { width: 500px; height: 500px; background: rgba(0,229,255,0.04); top: -100px; right: -100px; }
+    .orb-2 { width: 400px; height: 400px; background: rgba(124,58,237,0.04); bottom: 20%; left: -100px; }
 
-    .orb-2 {
-      width: 400px;
-      height: 400px;
-      background: rgba(124,58,237,0.04);
-      bottom: 20%;
-      left: -100px;
-    }
-
-    /* CURSOR */
-    .cursor {
-      display: inline-block;
-      width: 3px;
-      height: 1em;
-      background: var(--accent);
-      animation: blink 1s infinite;
-      vertical-align: text-bottom;
-      margin-left: 4px;
-    }
-
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
+    @keyframes blink { 50% { opacity: 0; } }
 
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
@@ -709,6 +670,7 @@
       .projects-grid { grid-template-columns: 1fr; }
       .project-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .exp-item { grid-template-columns: 1fr; gap: 8px; }
       footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
     }
   </style>
@@ -722,8 +684,9 @@
   <nav>
     <div class="nav-logo">KDB_DEV</div>
     <ul class="nav-links">
-      <li><a href="#projets">Projets</a></li>
       <li><a href="#competences">Stack</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#experience">Expérience</a></li>
       <li><a href="#about">À propos</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -732,11 +695,11 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-tag">Data & AI Engineer</div>
-      <h1>Killian<br><span class="name">Debrabant</span></h1>
+      <div class="hero-tag">Étudiant Ingénieur · CESI Nanterre</div>
+      <h1>Killian<br><span class="name">Debraize</span></h1>
       <p class="hero-subtitle">
-        Je construis des systèmes <span>IA end-to-end</span> —<br>
-        de l'exploration des données au déploiement en production.
+        Passionné par la <span>Data Science et l'IA</span> —<br>
+        à la recherche d'opportunités dans le domaine de l'intelligence artificielle.
       </p>
       <div class="hero-cta">
         <a href="#projets" class="btn-primary">Voir mes projets →</a>
@@ -749,16 +712,16 @@
 
     <div class="hero-stats">
       <div class="stat">
-        <div class="stat-number">4</div>
+        <div class="stat-number">5</div>
         <div class="stat-label">Projets IA</div>
       </div>
       <div class="stat">
-        <div class="stat-number">16K+</div>
-        <div class="stat-label">Données analysées</div>
+        <div class="stat-number">4</div>
+        <div class="stat-label">Stages</div>
       </div>
       <div class="stat">
         <div class="stat-number">100%</div>
-        <div class="stat-label">Open Source</div>
+        <div class="stat-label">LLM Local</div>
       </div>
     </div>
 
@@ -783,50 +746,60 @@
           <span class="skill-tag">Pandas</span>
           <span class="skill-tag">Scikit-learn</span>
           <span class="skill-tag">XGBoost</span>
-          <span class="skill-tag">FAISS</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">PyTorch</span>
         </div>
       </div>
       <div class="skill-category">
         <div class="skill-category-title">IA & LLM</div>
         <div class="skill-tags">
           <span class="skill-tag">Ollama</span>
-          <span class="skill-tag">Phi-3 Mini</span>
+          <span class="skill-tag">Mistral</span>
+          <span class="skill-tag">Gemini</span>
           <span class="skill-tag">sentence-transformers</span>
           <span class="skill-tag">RAG</span>
+          <span class="skill-tag">Embeddings</span>
         </div>
       </div>
       <div class="skill-category">
-        <div class="skill-category-title">Visualisation</div>
+        <div class="skill-category-title">Recherche vectorielle</div>
         <div class="skill-tags">
+          <span class="skill-tag">Qdrant</span>
+          <span class="skill-tag">FAISS</span>
+          <span class="skill-tag">MiniLM</span>
+          <span class="skill-tag">bge-micro</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">Backend & API</div>
+        <div class="skill-tags">
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">SQLAlchemy</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">JWT</span>
+          <span class="skill-tag">Java</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">Frontend & Visu</div>
+        <div class="skill-tags">
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">TypeScript</span>
           <span class="skill-tag">Streamlit</span>
           <span class="skill-tag">Plotly</span>
-          <span class="skill-tag">Matplotlib</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
         </div>
       </div>
       <div class="skill-category">
-        <div class="skill-category-title">MLOps</div>
+        <div class="skill-category-title">MLOps & Outils</div>
         <div class="skill-tags">
-          <span class="skill-tag">MLflow</span>
-          <span class="skill-tag">FastAPI</span>
           <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Docker Compose</span>
+          <span class="skill-tag">MLflow</span>
           <span class="skill-tag">GitHub Actions</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-category-title">Data Engineering</div>
-        <div class="skill-tags">
-          <span class="skill-tag">SQLite</span>
-          <span class="skill-tag">feedparser</span>
-          <span class="skill-tag">NewsAPI</span>
-          <span class="skill-tag">arXiv API</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-category-title">Outils</div>
-        <div class="skill-tags">
           <span class="skill-tag">Git</span>
-          <span class="skill-tag">VS Code</span>
-          <span class="skill-tag">Jupyter</span>
           <span class="skill-tag">Linux</span>
         </div>
       </div>
@@ -843,10 +816,57 @@
 
     <div class="projects-grid">
 
-      <!-- AI Watch — Featured -->
+      <!-- AI Research Platform — Featured -->
       <div class="project-card featured reveal">
         <div>
           <div class="project-number">// 01 — PROJET PHARE</div>
+          <span class="project-emoji">🔎</span>
+          <h3 class="project-title">AI Research Platform</h3>
+          <p class="project-description">
+            Plateforme full-stack de recherche IA multi-sources — agrège arXiv, GitHub et Hugging Face, gère des documents personnels (RAG hybride), et expose un assistant IA local capable de répondre à partir de sources publiques, de documents personnels, ou des deux.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">React + TypeScript</span>
+            <span class="stack-tag">Qdrant</span>
+            <span class="stack-tag">Ollama</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">sentence-transformers</span>
+            <span class="stack-tag">Docker Compose</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/killian-db/ai-research-platform" target="_blank" class="project-link">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="project-metric">
+            <span class="metric-label">Sources intégrées</span>
+            <span class="metric-value">arXiv · GitHub · HF</span>
+          </div>
+          <div class="project-metric">
+            <span class="metric-label">Recherche vectorielle</span>
+            <span class="metric-value">Qdrant (pub + privé)</span>
+          </div>
+          <div class="project-metric">
+            <span class="metric-label">Formats documents</span>
+            <span class="metric-value">TXT · PDF · DOCX</span>
+          </div>
+          <div class="project-metric">
+            <span class="metric-label">Scopes RAG</span>
+            <span class="metric-value">private · public · hybrid</span>
+          </div>
+          <div class="project-metric">
+            <span class="metric-label">LLM local</span>
+            <span class="metric-value">Ollama (qwen2.5:3b)</span>
+          </div>
+        </div>
+        <div class="project-badge">FEATURED</div>
+      </div>
+
+      <!-- AI Watch -->
+      <div class="project-card featured reveal" style="margin-top: 0;">
+        <div>
+          <div class="project-number">// 02 — VEILLE AUTOMATISÉE</div>
           <span class="project-emoji">📡</span>
           <h3 class="project-title">AI Watch</h3>
           <p class="project-description">
@@ -891,11 +911,11 @@
 
       <!-- AI Salary MLOps -->
       <div class="project-card reveal">
-        <div class="project-number">// 02</div>
+        <div class="project-number">// 03</div>
         <span class="project-emoji">📈</span>
         <h3 class="project-title">AI Salary MLOps</h3>
         <p class="project-description">
-          Pipeline MLOps complet — entraînement XGBoost trackéé avec MLflow, API REST FastAPI, containerisation Docker et CI/CD GitHub Actions.
+          Pipeline MLOps complet — entraînement XGBoost tracké avec MLflow, API REST FastAPI, containerisation Docker et CI/CD GitHub Actions.
         </p>
         <div class="project-stack">
           <span class="stack-tag">FastAPI</span>
@@ -911,7 +931,7 @@
 
       <!-- AI Salary Predictor -->
       <div class="project-card reveal">
-        <div class="project-number">// 03</div>
+        <div class="project-number">// 04</div>
         <span class="project-emoji">💼</span>
         <h3 class="project-title">AI Salary Predictor</h3>
         <p class="project-description">
@@ -930,7 +950,7 @@
 
       <!-- AI Jobs Dashboard -->
       <div class="project-card reveal">
-        <div class="project-number">// 04</div>
+        <div class="project-number">// 05</div>
         <span class="project-emoji">📊</span>
         <h3 class="project-title">AI Jobs Dashboard</h3>
         <p class="project-description">
@@ -950,23 +970,121 @@
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section class="experience-section" id="experience">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2 class="section-title">Expérience</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="experience-list">
+
+      <div class="exp-item reveal">
+        <div>
+          <div class="exp-date">02/2025 — 08/2025</div>
+          <div class="exp-company">EDF</div>
+        </div>
+        <div>
+          <div class="exp-title">Stage de fin d'études — Data Science & IA</div>
+          <div class="exp-body">
+            <ul>
+              <li>Conception d'une solution IA pour la comparaison automatique de documents PDF et la détection d'incohérences temporelles et logiques.</li>
+              <li>Développement d'un pipeline complet : extraction, nettoyage, structuration, embeddings, orchestration de modèles LLM (Mistral, Gemini), analyse de cohérence (précision, rappel, F1-score).</li>
+              <li>Amélioration de la traçabilité et de la performance par rapport à l'analyse manuelle.</li>
+            </ul>
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">Python</span>
+            <span class="exp-tag">LLM</span>
+            <span class="exp-tag">Mistral</span>
+            <span class="exp-tag">Gemini</span>
+            <span class="exp-tag">Embeddings</span>
+            <span class="exp-tag">NLP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div>
+          <div class="exp-date">10/2023 — 02/2024</div>
+          <div class="exp-company">Thales — Roumanie</div>
+        </div>
+        <div>
+          <div class="exp-title">Stage international — Développeur Fullstack</div>
+          <div class="exp-body">
+            <ul>
+              <li>Formation et mise en pratique du développement back-end en Java dans le cadre d'une application interne.</li>
+            </ul>
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">Java</span>
+            <span class="exp-tag">Backend</span>
+            <span class="exp-tag">Fullstack</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div>
+          <div class="exp-date">01/2023 — 04/2023</div>
+          <div class="exp-company">EDF</div>
+        </div>
+        <div>
+          <div class="exp-title">Stage Data Science</div>
+          <div class="exp-body">
+            <ul>
+              <li>Découverte du développement Python en Data Science et mise en œuvre de tests unitaires (pytest, unittest).</li>
+            </ul>
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">Python</span>
+            <span class="exp-tag">Data Science</span>
+            <span class="exp-tag">pytest</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div>
+          <div class="exp-date">04/2022 — 07/2022</div>
+          <div class="exp-company">Vinci Energies</div>
+        </div>
+        <div>
+          <div class="exp-title">Stage Business Intelligence</div>
+          <div class="exp-body">
+            <ul>
+              <li>Analyse de données issues de fichiers Excel et création de supports de restitution BI (reporting, indicateurs) sous PowerPoint.</li>
+            </ul>
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">Excel</span>
+            <span class="exp-tag">Reporting</span>
+            <span class="exp-tag">PowerPoint</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section class="about-section" id="about">
     <div class="section-header">
-      <span class="section-number">03</span>
+      <span class="section-number">04</span>
       <h2 class="section-title">À propos</h2>
       <div class="section-line"></div>
     </div>
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          Je m'appelle <strong>Killian</strong>, passionné par la <strong>Data Science</strong> et l'<strong>Intelligence Artificielle</strong>. Je construis des projets end-to-end — de la collecte des données jusqu'au déploiement en production.
+          Je m'appelle <strong>Killian Debraize</strong>, ingénieur en informatique diplômé du <strong>CESI Nanterre</strong>, passionné par l'<strong>Intelligence Artificielle agentique</strong> et ses applications concrètes.
         </p>
         <p>
-          Mon approche : apprendre en construisant des <strong>projets concrets et utiles</strong>, en utilisant les technologies les plus récentes du domaine IA.
+          Mon objectif est de concevoir des solutions IA capables d'agir de façon autonome et d'augmenter les capacités des métiers. Je m'attache à comprendre en profondeur les processus métiers afin de développer des outils <strong>sur-mesure, robustes et interprétables</strong>.
         </p>
         <p>
-          Je suis particulièrement intéressé par les <strong>LLMs</strong>, le <strong>MLOps</strong> et les systèmes de <strong>veille automatisée</strong>.
+          Expérimenté en <strong>Data Science, NLP</strong> et développement de solutions IA innovantes (EDF, Vinci Energies), je souhaite contribuer à des projets où l'IA devient un véritable levier d'optimisation et de transformation des organisations.
         </p>
         <br>
         <a href="https://github.com/killian-db" target="_blank" class="btn-secondary">Voir mon GitHub →</a>
@@ -975,33 +1093,25 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <div class="timeline-title">AI Watch</div>
-            <div class="timeline-sub">2026 — Projet phare</div>
-            <div class="timeline-desc">Plateforme de veille IA automatisée avec LLM local, recherche sémantique et rapport quotidien.</div>
+            <div class="timeline-title">École d'Ingénieur CESI Nanterre</div>
+            <div class="timeline-sub">2022 — 2025 · Cycle Ingénieur Informatique</div>
+            <div class="timeline-desc">Spécialité Informatique. Formation complète en développement, data science et IA.</div>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <div class="timeline-title">AI Salary MLOps</div>
-            <div class="timeline-sub">2026 — Pipeline MLOps</div>
-            <div class="timeline-desc">Premier pipeline MLOps complet avec FastAPI, MLflow, Docker et GitHub Actions.</div>
+            <div class="timeline-title">École Préparatoire CESI Nanterre</div>
+            <div class="timeline-sub">2020 — 2022 · Classe prépa Informatique</div>
+            <div class="timeline-desc">Spécialité Informatique. Fondamentaux algorithmiques, mathématiques et systèmes.</div>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <div class="timeline-title">Machine Learning</div>
-            <div class="timeline-sub">2026 — Classification</div>
-            <div class="timeline-desc">XGBoost + GridSearchCV, feature engineering, évaluation et déploiement Streamlit.</div>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-title">Data Analysis</div>
-            <div class="timeline-sub">2026 — Début du parcours</div>
-            <div class="timeline-desc">Premier dashboard interactif avec Pandas, Streamlit et Plotly sur 16K+ données.</div>
+            <div class="timeline-title">Handball</div>
+            <div class="timeline-sub">Élite régionale · Championnat de France</div>
+            <div class="timeline-desc">Pratique compétitive à haut niveau. Travail d'équipe, rigueur, dépassement de soi.</div>
           </div>
         </div>
       </div>
@@ -1011,7 +1121,7 @@
   <!-- CONTACT -->
   <section class="contact-section" id="contact">
     <div class="section-header">
-      <span class="section-number">04</span>
+      <span class="section-number">05</span>
       <h2 class="section-title">Contact</h2>
       <div class="section-line"></div>
     </div>
@@ -1019,27 +1129,20 @@
       Ouvert aux opportunités, collaborations et échanges autour de la Data & l'IA.
     </p>
     <div class="contact-links reveal">
-      <a href="https://github.com/killian-db" target="_blank" class="btn-primary">
-        GitHub →
-      </a>
-      <a href="https://linkedin.com/in/ton-profil" target="_blank" class="btn-secondary">
-        LinkedIn →
-      </a>
+      <a href="https://github.com/killian-db" target="_blank" class="btn-primary">GitHub →</a>
+      <a href="https://linkedin.com/in/ton-profil" target="_blank" class="btn-secondary">LinkedIn →</a>
+      <a href="mailto:ton.email@gmail.com" class="btn-secondary">kdebraize@gmail.com</a>
+      <a href="tel:+33600000000" class="btn-secondary">06 07 56 55 84</a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-text">
-      © 2026 <span class="footer-accent">Killian Debrabant</span>
-    </div>
-    <div class="footer-text">
-      Built with <span class="footer-accent">HTML · CSS · passion</span>
-    </div>
+    <div class="footer-text">© 2026 <span class="footer-accent">Killian Debraize</span></div>
+    <div class="footer-text">Built with <span class="footer-accent">HTML · CSS · passion</span></div>
   </footer>
 
   <script>
-    // Reveal on scroll
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
@@ -1052,4 +1155,3 @@
   </script>
 </body>
 </html>
-```
