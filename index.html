@@ -149,7 +149,18 @@
       opacity: 0;
       animation: fadeUp 0.6s 0.6s forwards;
     }
- 
+    
+    .hero-summary {
+      margin-top: 28px;
+      font-size: 13px;
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+      line-height: 1.7;
+      max-width: 520px;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.9s forwards;
+    }
+    
     .hero-subtitle span { color: var(--accent3); font-weight: 600; }
  
     .hero-cta {
@@ -698,13 +709,15 @@
         </a>
         <a href="#contact" class="btn-secondary">Me contacter →</a>
       </div>
-    </div>
-    <div style="margin-top:30px; font-size:13px; color:var(--muted); font-family:'Space Mono', monospace;">
+
+      <div class="hero-summary">
       🎯 Data Scientist / IA / MLOps<br>
       🧰 Python · Docker · LLM · RAG · FastAPI<br>
       🧩 Agile · Jira · Git · pipelines IA<br>
       🌱 Sensibilité : production, performance, automatisation
+      </div>
     </div>
+    
     <div class="hero-stats">
       <div class="stat">
         <div class="stat-number">5</div>
